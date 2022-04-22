@@ -1,13 +1,43 @@
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import About from './pages/About';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  HashRouter as Router,
+  useLocation
+} from "react-router-dom";
+import { AppBlocking, BluetoothSearchingOutlined } from '@mui/icons-material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router basename="/">
+      <Routes>
+        <Route exact path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="Blog" element={<Blog />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="Gallery" element={<Gallery />} />
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
