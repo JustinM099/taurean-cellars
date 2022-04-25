@@ -26,7 +26,7 @@ const Contact = () => {
                     <Card variant="outlined"
                         style={{
                             backgroundColor: "black",
-                            width: '50vw'
+                            width: '75vw'
                         }}
                     >
                         <CardContent>
