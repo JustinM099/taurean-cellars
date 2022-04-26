@@ -14,6 +14,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import CardHeader from '@mui/material/CardHeader';
 
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -99,8 +100,10 @@ function Gallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            style={{backgroundImage: 'none',
-                    backgroundColor: 'black'}}
+            style={{
+                backgroundImage: 'none',
+                backgroundColor: 'black'
+            }}
         >
             <Grid container
                 spacing={0}
@@ -110,69 +113,87 @@ function Gallery() {
                 style={{ minHeight: '100vh' }}
             >
                 <Grid item xs={3}>
-                        <Card variant="outlined"
-                            style={{
-                                backgroundColor: "black",
-                                width: '70vw',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}
-                        >
-                            <CardContent>
-                                <AutoPlaySwipeableViews
-                                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                                    index={activeStep}
-                                    onChangeIndex={handleStepChange}
-                                    enableMouseEvents
-                                >
-                                    {images.map((step, index) => (
-                                        <div key={step.label}>
-                                            {Math.abs(activeStep - index) <= 2 ? (
-                                                <Box
-                                                    component="img"
-                                                    sx={{
-                                                        display: 'block',
-                                                        overflow: 'hidden',
-                                                        width: '100%',
-                                                    }}
-                                                    src={step.imgPath}
-                                                    alt={step.label}
-                                                />
-                                            ) : null}
-                                        </div>
-                                    ))}
-                                </AutoPlaySwipeableViews>
-                                <MobileStepper
-                                    steps={maxSteps}
-                                    position="static"
-                                    activeStep={activeStep}
-                                    nextButton={
-                                        <Button
-                                            size="small"
-                                            onClick={handleNext}
-                                            disabled={activeStep === maxSteps - 1}
-                                        >
-                                            Next
-                                            {theme.direction === 'rtl' ? (
-                                                <KeyboardArrowLeft />
-                                            ) : (
-                                                <KeyboardArrowRight />
-                                            )}
-                                        </Button>
-                                    }
-                                    backButton={
-                                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                            {theme.direction === 'rtl' ? (
-                                                <KeyboardArrowRight />
-                                            ) : (
-                                                <KeyboardArrowLeft />
-                                            )}
-                                            Back
-                                        </Button>
-                                    }
-                                />
-                            </CardContent>
-                        </Card>
+                    <Card
+                        style={{
+                            backgroundColor: "black",
+                            color: "white",
+                            width: "90vw",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            textAlign: "center"
+                        }}
+                    >
+                        <h1>
+                            GALLERY
+                        </h1>
+                    </Card>
+                </Grid>
+                <Grid item xs={3}>
+                    <Card variant="outlined"
+                        style={{
+                            backgroundColor: "black",
+                            color: "white",
+                            width: '90vw',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}
+                    >
+
+                        <CardContent>
+                            <AutoPlaySwipeableViews
+                                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                                index={activeStep}
+                                onChangeIndex={handleStepChange}
+                                enableMouseEvents
+                            >
+                                {images.map((step, index) => (
+                                    <div key={step.label}>
+                                        {Math.abs(activeStep - index) <= 2 ? (
+                                            <Box
+                                                component="img"
+                                                sx={{
+                                                    display: 'block',
+                                                    overflow: 'hidden',
+                                                    width: '100%',
+                                                }}
+                                                src={step.imgPath}
+                                                alt={step.label}
+                                            />
+                                        ) : null}
+                                    </div>
+                                ))}
+                            </AutoPlaySwipeableViews>
+                            <MobileStepper
+                                steps={maxSteps}
+                                position="static"
+                                activeStep={activeStep}
+                                nextButton={
+                                    <Button
+                                        size="small"
+                                        onClick={handleNext}
+                                        disabled={activeStep === maxSteps - 1}
+                                    >
+                                        Next
+                                        {theme.direction === 'rtl' ? (
+                                            <KeyboardArrowLeft />
+                                        ) : (
+                                            <KeyboardArrowRight />
+                                        )}
+                                    </Button>
+                                }
+                                backButton={
+                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                        {theme.direction === 'rtl' ? (
+                                            <KeyboardArrowRight />
+                                        ) : (
+                                            <KeyboardArrowLeft />
+                                        )}
+                                        Back
+                                    </Button>
+                                }
+                            />
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
         </motion.div>

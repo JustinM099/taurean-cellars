@@ -29,7 +29,7 @@ const Home = () => {
                         >
                             <CardContent>
                                 <img src={require("../assets/img/taurean-header-img.jpeg")}
-                                    style={{ width: '60vw' }} />
+                                    style={{ width: '81vw' }} />
                             </CardContent>
                         </Card>
                     </Link>
@@ -43,11 +43,12 @@ const Home = () => {
                             textAlign: 'center'
                         }}>
                         <CardContent>
-                        <Typography sx={{ fontSize: 16 }} color="white">
-                            <h2>
+                            <h1
+                            style={{
+                                color:"white"
+                            }}>
                                 Showcasing the profound wines of select Puget Sound vineyards.
-                            </h2>
-                            </Typography>
+                            </h1>
                         </CardContent>
                     </Card>
                 </Grid>
