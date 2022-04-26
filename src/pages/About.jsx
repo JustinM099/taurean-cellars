@@ -54,7 +54,11 @@ const About = () => {
                 <br />
                 <Grid item xs={3}>
                     <Link to="/Contact" style={{ textDecoration: 'none' }}>
-                        <Card variant="outlined">
+                        <Card variant="outlined"
+                        style={{
+                            width: '95vw'
+                        }}
+                        >
                             <CardContent
                                 style={{
                                     backgroundColor: "black",
