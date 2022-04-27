@@ -62,7 +62,10 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon 
+              style={{
+                color: 'black'
+              }}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -82,6 +85,11 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              <Link to={'/Home'} style={{textDecoration: 'none'}}>
+                <MenuItem key='home' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Home</Typography>
+                </MenuItem>
+              </Link>
               {pages.map((page) => (
                 <Link to={`/${page}`} style={{ textDecoration: 'none' }}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -98,8 +106,8 @@ const ResponsiveAppBar = () => {
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
             <Link to="/Home">
-              <img src={require("../assets/img/Roiundel.png")}
-                style={{ height: '9vh' }} />
+              {/* <img src={require("../assets/img/Roiundel.png")}
+                style={{ height: '9vh' }} /> */}
             </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
