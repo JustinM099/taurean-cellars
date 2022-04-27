@@ -28,12 +28,12 @@ const About = () => {
                         <Card variant="outlined"
 
                         >
-                            <CardContent                            
-                            style={{
-                                backgroundColor: "black",
-                                textAlign: "center"
-                            }}>
-                                <Typography sx={{ fontSize: 20 }} color="white">
+                            <CardContent
+                                style={{
+                                    backgroundColor: "white",
+                                    textAlign: "center"
+                                }}>
+                                <Typography sx={{ fontSize: 20 }} color="black">
                                     <h2 style={{ textAlign: 'center' }}>About</h2>
                                     <p> We are a very small, very passionate winery located in Renton, Washington. <br /><br />
                                         We source grapes from Oregon and Washington and have an obsession with making the best wines
@@ -55,35 +55,33 @@ const About = () => {
                 <Grid item xs={3}>
                     <Link to="/Contact" style={{ textDecoration: 'none' }}>
                         <Card variant="outlined"
-                        style={{
-                            width: '95vw'
-                        }}
+                            style={{
+                                width: '95vw'
+                            }}
                         >
                             <CardContent
                                 style={{
-                                    backgroundColor: "black",
+                                    backgroundColor: "white",
                                     alignItems: "center",
                                     justifyContent: "center",
                                     textAlign: "center"
                                 }}
                             >
                                 <h1
-                                    style={{ textAlign: 'center', color: 'white' }}
-                                    >
+                                    style={{ textAlign: 'center', color: 'black' }}
+                                >
                                     Ryan
                                 </h1>
                                 <img src={require("../assets/img/ryan.jpeg")}
-                                    style={{ height: '50vh' }}
+                                    style={{ width: '70vw' }}
                                 />
-                                <Typography sx={{ fontSize: 20 }} color="white">
+                                <Typography sx={{ fontSize: 20 }} color="black">
                                     <p> The man, the myth, the legend. <br /><br />
-                                        Jesus, look at this big swinging dick.
-                                        <br />
-                                        What a pimp. I can't believe that he walks the same earth as us. Jules and Vincent wrapped into one.
-                                        <br />
-                                        And the dude on top of that.
-                                        <br /><br />
-                                        This motherfucker abides.</p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet enim tortor at auctor urna.<br />
+                                        Quam adipiscing vitae proin sagittis nisl rhoncus. Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Et malesuada fames ac turpis egestas sed. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras.<br />
+                                        Consectetur purus ut faucibus pulvinar elementum. Lobortis elementum nibh tellus molestie nunc non blandit. Urna porttitor rhoncus dolor purus. Neque ornare aenean euismod elementum nisi quis eleifend. Cursus turpis massa tincidunt dui ut ornare.<br />
+                                        Id eu nisl nunc mi ipsum. Sit amet consectetur adipiscing elit ut aliquam purus sit amet. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Sem et tortor consequat id. Mi quis hendrerit dolor magna. Libero id faucibus nisl tincidunt eget nullam non nisi.<br />
+                                        Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Egestas sed tempus urna et pharetra.</p>
                                 </Typography>
                             </CardContent>
                         </Card>

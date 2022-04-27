@@ -102,7 +102,7 @@ function Gallery() {
             transition={{ duration: 0.5 }}
             style={{
                 backgroundImage: 'none',
-                backgroundColor: 'black'
+                backgroundColor: 'white'
             }}
         >
             <Grid container
@@ -115,8 +115,8 @@ function Gallery() {
                 <Grid item xs={3}>
                     <Card
                         style={{
-                            backgroundColor: "black",
-                            color: "white",
+                            backgroundColor: "white",
+                            color: "black",
                             width: "90vw",
                             justifyContent: "center",
                             alignItems: "center",
@@ -131,8 +131,8 @@ function Gallery() {
                 <Grid item xs={3}>
                     <Card variant="outlined"
                         style={{
-                            backgroundColor: "black",
-                            color: "white",
+                            backgroundColor: "white",
+                            color: "black",
                             width: '90vw',
                             justifyContent: 'center',
                             alignItems: 'center'

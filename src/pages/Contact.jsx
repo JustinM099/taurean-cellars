@@ -25,16 +25,16 @@ const Contact = () => {
                 <Grid item xs={3}>
                     <Card variant="outlined"
                         style={{
-                            backgroundColor: "black",
+                            backgroundColor: "white",
                             width: '75vw'
                         }}
                     >
                         <CardContent>
-                            <Typography sx={{ fontSize: 20 }} color="white" style={{ textAlign: 'center' }}>
+                            <Typography sx={{ fontSize: 20 }} color="black" style={{ textAlign: 'center' }}>
                                 <h2>Contact</h2>
                                 <p>Ryan Manning</p>
-                                <p><a href="tel:1-206-747-2498" style={{ textDecoration: 'none', color: 'white' }}>206-747-2498</a></p>
-                                <p><a href="mailto: info@taureancellars.com" style={{ textDecoration: 'none', color: 'white' }}>info@taureancellars.com</a></p>
+                                <p><a href="tel:1-206-747-2498" style={{ textDecoration: 'none', color: 'black' }}>206-747-2498</a></p>
+                                <p><a href="mailto: info@taureancellars.com" style={{ textDecoration: 'none', color: 'black' }}>info@taureancellars.com</a></p>
                                 <p>Hours: By Appointment</p>
                                 <p>Renton, WA</p>
                             </Typography>

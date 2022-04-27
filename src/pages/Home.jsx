@@ -25,7 +25,7 @@ const Home = () => {
                 <Grid item xs={3}>
                     <Link to="/About" style={{ textDecoration: 'none' }}>
                         <Card variant="outlined"
-                            style={{ backgroundColor: "black" }}
+                            style={{ backgroundColor: "white" }}
                         >
                             <CardContent>
                                 <img src={require("../assets/img/taurean-header-img.jpeg")}
@@ -37,7 +37,7 @@ const Home = () => {
                 <Grid item xs={3}>
                     <Card variant="outlined"
                         style={{
-                            backgroundColor: "black",
+                            backgroundColor: "white",
                             margin: '1vh',
                             width: '60vw',
                             textAlign: 'center'
@@ -45,7 +45,7 @@ const Home = () => {
                         <CardContent>
                             <h1
                             style={{
-                                color:"white"
+                                color:"black"
                             }}>
                                 Showcasing the profound wines of select Puget Sound vineyards.
                             </h1>
